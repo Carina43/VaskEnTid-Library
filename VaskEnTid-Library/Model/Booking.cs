@@ -44,7 +44,7 @@ namespace VaskEnTidLibrary.Model
             set { _bookingTime = value; }
         }
 
-        public Laundromat(int bookingID, int machineID, string phoneNumber, DateOnly bookingDate, TimeOnly bookingTime)
+        public Booking(int bookingID, int machineID, string phoneNumber, DateOnly bookingDate, TimeOnly bookingTime)
         {
             BookingID = bookingID;
             MachineID = machineID;
