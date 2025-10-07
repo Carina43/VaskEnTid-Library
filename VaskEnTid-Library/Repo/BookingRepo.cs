@@ -6,13 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using VaskEnTidLibrary.Model;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VaskEnTid_Library.Repo
 {
     public class BookingRepo
     {
         static string connectionString = "Data Source=(localdb)\'MSSQLLocalDB; DataBase=VaskEnTid; Integrated Security = True; Encrypt=False;TrustServerCertificate=False;";
-        
+
+
         public List<Booking> GetAll()
         {
             List<Booking> bookings = new List<Booking>();
