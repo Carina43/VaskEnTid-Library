@@ -14,13 +14,13 @@ namespace VaskEnTidLibrary.Model
         private DateOnly _bookingDate;
         private TimeOnly _bookingTime;
 
-        internal int BookingID
+        public int BookingID
         {
             get { return _bookingID; }
             set { _bookingID = value; }
         }
 
-        internal int MachineID
+        public int MachineID
         {
             get { return _machineID; }
             set { _machineID = value; }
@@ -32,13 +32,13 @@ namespace VaskEnTidLibrary.Model
             set { _phoneNumber = value; }
         }
 
-        internal DateOnly BookingDate
+        public DateOnly BookingDate
         {
             get { return _bookingDate; }
             set { _bookingDate = value; }
         }
 
-        internal TimeOnly BookingTime
+        public TimeOnly BookingTime
         {
             get { return _bookingTime; }
             set { _bookingTime = value; }

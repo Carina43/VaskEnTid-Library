@@ -14,25 +14,25 @@ namespace VaskEnTidLibrary.Model
         private string _zipCode;
         private string _city;
 
-        internal int LaundromatID
+        public int LaundromatID
         {
             get { return _laundromatID; }
             set { _laundromatID = value; }
         }
 
-        internal string Adress
+        public string Adress
         {
             get { return _adress; }
             set { _adress = value; }
         }
 
-        internal string ZipCode
+        public string ZipCode
         {
             get { return _zipCode; }
             set { _zipCode = value; }
         }
 
-        internal string City
+        public string City
         {
             get { return _city; }
             set { _city = value; }

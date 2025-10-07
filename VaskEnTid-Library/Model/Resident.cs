@@ -17,14 +17,14 @@ namespace VaskEnTidLibrary.Model
         private string _apartmentNo;
         private string _email;
 
-        internal string PhoneNumber { get { return _phoneNumber; } set { _phoneNumber = value; } }
-        internal string FirstName { get { return _firstName; } set { _firstName = value; } }
-        internal string LastName { get { return _lastName; } set { _lastName = value; } }
-        internal string Adress { get { return _adress; } set { _adress = value; } }
-        internal string ZipCode { get { return _zipCode; } set { _zipCode = value; } }
-        internal string City { get { return _city; } set { _city = value; } }
-        internal string ApartmentNo { get { return _apartmentNo; } set { _apartmentNo = value; } }
-        internal string Email { get { return _email; } set { _email = value; } }
+        public string PhoneNumber { get { return _phoneNumber; } set { _phoneNumber = value; } }
+        public string FirstName { get { return _firstName; } set { _firstName = value; } }
+        public string LastName { get { return _lastName; } set { _lastName = value; } }
+        public string Adress { get { return _adress; } set { _adress = value; } }
+        public string ZipCode { get { return _zipCode; } set { _zipCode = value; } }
+        public string City { get { return _city; } set { _city = value; } }
+        public string ApartmentNo { get { return _apartmentNo; } set { _apartmentNo = value; } }
+        public string Email { get { return _email; } set { _email = value; } }
 
         public Resident(string phoneNumber, string firstName, string lastName, string adress, string zipCode, string city, string apartmentNo, string email)
         {
