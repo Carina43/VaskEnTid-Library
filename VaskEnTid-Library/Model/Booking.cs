@@ -26,7 +26,7 @@ namespace VaskEnTidLibrary.Model
             set { _machineID = value; }
         }
 
-        internal string PhoneNumber
+        public string PhoneNumber
         {
             get { return _phoneNumber; }
             set { _phoneNumber = value; }

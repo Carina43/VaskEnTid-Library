@@ -9,7 +9,7 @@ using VaskEnTidLibrary.Model;
 
 namespace VaskEnTid_Library.Repo
 {
-    internal class BookingRepo
+    public class BookingRepo
     {
         static string connectionString = "Data Source=(localdb)\'MSSQLLocalDB; DataBase=VaskEnTid; Integrated Security = True; Encrypt=False;TrustServerCertificate=False;";
         
