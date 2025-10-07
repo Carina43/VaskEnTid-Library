@@ -11,7 +11,7 @@ namespace VaskEnTid_Library.Repo
 {
     internal class BookingRepo
     {
-        static string connectionString = "mangler";
+        static string connectionString = "Data Source=(localdb)\MSSQLLocalDB; DataBase=VaskEnTid; Integrated Security = True; Encrypt=False;TrustServerCertificate=False;";
 
         public List<Booking> GetAll()
         {
