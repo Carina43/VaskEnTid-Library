@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection.PortableExecutable;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
@@ -109,5 +110,36 @@ namespace VaskEnTid_Library.Repo
             }
         }
 
+        public void Update(Resident resident, string oldphonenumber)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string sqlCode = "UPDATE Resident SET phonenumber = @phonenumber, firstname = @firstname, lastname = @lastname, adress = @adress, zipcode = @zipcode, city = @city, apartno = @apartno, email = @email " +
+                             "WHERE phonenumber = @oldphonenumber";
+
+                SqlCommand command = new SqlCommand(sqlCode, connection);
+                command.Parameters.AddWithValue("@phonenumber", resident.PhoneNumber);
+                command.Parameters.AddWithValue("@oldphonenumber", oldphonenumber);
+                command.Parameters.AddWithValue("@firstname", resident.FirstName);
+                command.Parameters.AddWithValue("@lastname", resident.LastName);
+                command.Parameters.AddWithValue("@adress", resident.Adress);
+                command.Parameters.AddWithValue("@zipcode", resident.ZipCode);
+                command.Parameters.AddWithValue("@city", resident.City);
+                command.Parameters.AddWithValue("@apartno", resident.ApartmentNo);
+                command.Parameters.AddWithValue("@email", resident.Email);
+
+                command.ExecuteNonQuery(); // Udfører UPDATE-operationen
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close(); // Lukker forbindelsen manuelt
+            }
+        }
     }
 }
