@@ -15,7 +15,6 @@ namespace VaskEnTid_Library.Repo
     {
         static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=VaskEnTid; Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
 
-
         public List<Booking> GetAll()
         {
             List<Booking> bookings = new List<Booking>();
@@ -49,6 +48,36 @@ namespace VaskEnTid_Library.Repo
             }
 
             return bookings;
+        }
+
+        public void Add(Booking booking)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+
+                string sqlCode = "INSERT INTO Booking (machineID, phonenumber, bookingdate, bookingtime) " +
+                                 "VALUES (@MachineID, @PhoneNumber, @Date, @Time);";
+
+                SqlCommand command = new SqlCommand(sqlCode, connection);
+
+                command.Parameters.AddWithValue("@MachineID", booking.MachineID);
+                command.Parameters.AddWithValue("@PhoneNumber", booking.PhoneNumber);
+                command.Parameters.AddWithValue("@Date", booking.BookingDate);
+                command.Parameters.AddWithValue("@Time", booking.BookingTime);
+
+                command.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("Error:\n" + ex);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
