@@ -8,7 +8,7 @@ namespace VaskEnTidLibrary.Model
 {
     public abstract class Machine
     {
-        internal enum MachineType { Vaskemaskine, Tørretumbler, Rullemaskine }
+        public enum MachineType { Vaskemaskine, Tørretumbler, Rullemaskine }
 
         private int _machineID;
         private int _luandromatID;
