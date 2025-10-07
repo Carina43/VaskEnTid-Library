@@ -13,7 +13,7 @@ namespace VaskEnTid_Library.Repo
 {
     public class BookingRepo
     {
-        static string connectionString = "Data Source=(localdb)\'MSSQLLocalDB; DataBase=VaskEnTid; Integrated Security = True; Encrypt=False;TrustServerCertificate=False;";
+        static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=VaskEnTid; Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
 
 
         public List<Booking> GetAll()
