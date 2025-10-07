@@ -104,5 +104,34 @@ namespace VaskEnTid_Library.Repo
                 connection.Close();
             }
         }
+
+        public void Update(Booking booking)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+                string sqlCode = "UPDATE Booking SET machineID = @machineID, phonenumber = @phonenumber, bookingdate = @bookingdate, bookingtime = @bookingtime " +
+                             "WHERE bookingID = @bookingID";
+
+                SqlCommand command = new SqlCommand(sqlCode, connection);
+                command.Parameters.AddWithValue("@bookingID", booking.BookingID);
+                command.Parameters.AddWithValue("@machineID", booking.MachineID);
+                command.Parameters.AddWithValue("@phonenumber", booking.PhoneNumber);
+                command.Parameters.AddWithValue("@bookingdate", booking.BookingDate);
+                command.Parameters.AddWithValue("@bookingtime", booking.BookingTime);
+
+                command.ExecuteNonQuery(); // Udfører UPDATE-operationen
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close(); // Lukker forbindelsen manuelt
+            }
+        }
     }
 }

@@ -52,6 +52,5 @@ namespace VaskEnTidLibrary.Model
             BookingDate = bookingDate;
             BookingTime = bookingTime;
         }
-
     }
 }

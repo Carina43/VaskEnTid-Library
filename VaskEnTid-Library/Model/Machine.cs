@@ -8,19 +8,19 @@ namespace VaskEnTidLibrary.Model
 {
     public abstract class Machine
     {
-        public enum MachineType { Vaskemaskine, Tørretumbler, Rullemaskine }
+        internal enum MachineType { Vaskemaskine, Tørretumbler, Rullemaskine }
 
         private int _machineID;
         private int _luandromatID;
         private MachineType _machineType;
 
-        public int MachineID { get { return _machineID; } set { _machineID = value; } }
-        public int LaundromatID { get { return _luandromatID; } set { _luandromatID = value; } }
-        public MachineType Type { get { return _machineType; } set { _machineType = value; } }
+        internal int MachineID { get { return _machineID; } set { _machineID = value; } }
+        internal int LaundromatID { get { return _luandromatID; } set { _luandromatID = value; } }
+        internal MachineType Type { get { return _machineType; } set { _machineType = value; } }
 
-        public Machine(int machineID, int laundromatID)
+        public Machine(int id, int laundromatID)
         {
-            MachineID = machineID;
+            MachineID = id;
             LaundromatID = laundromatID;
         }
     }

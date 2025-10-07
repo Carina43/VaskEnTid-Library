@@ -54,7 +54,6 @@ namespace VaskEnTid_Library.Repo
                             }
 
                     }
-
                 }
             }
             catch (Exception ex)

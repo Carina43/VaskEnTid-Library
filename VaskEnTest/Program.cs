@@ -6,6 +6,20 @@ namespace VaskEnTest
     {
         static void Main(string[] args)
         {
+            LaundromatRepo hahah = new LaundromatRepo();
+
+            foreach (var obj in hahah.GetAll())
+            {
+                Console.WriteLine($"{obj.LaundromatID}  {obj.Adress} {obj.City} ");
+            }
+
+            //hahah.Update(new Booking(1, 8, "12345678", new DateOnly(2025, 12, 24), new TimeOnly(8, 0, 0)));
+
+            //foreach (var obj in hahah.GetAll())
+            //{
+            //    Console.WriteLine($"{obj.MachineID}  {obj.PhoneNumber} {obj.BookingDate} ");
+            //}
+
             //BookingRepo hahah = new BookingRepo();
 
             //List<Booking> bookings = hahah.GetAll();
@@ -23,9 +37,7 @@ namespace VaskEnTest
             //    Console.WriteLine($"{booking.BookingID}  {booking.PhoneNumber}");
             //}
 
-            MachineRepo hahah = new MachineRepo();
 
-            List<Machine> machines = hahah.GetAll();
             //foreach (Resident resident in residents)
             //{
             //    Console.WriteLine($"{resident.PhoneNumber}  {resident.FirstName}");
@@ -39,13 +51,10 @@ namespace VaskEnTest
             //hahah.Update(new Resident("33344455", "Gunnar", "Obsternasig", "Holbækvej 215", "4300", "Holbæk", "2A", "obsternasen@live.com"), "44773478");
             //hahah.Update(new Resident("33344455", "Gunnar", "Obsternosig", "Holbækvej 215", "4300", "Holbæk", "2A", "obsternasen@live.com"), "33344455");
 
-            machines = hahah.GetAll();
-            foreach (Machine m in machines)
-            {
-                Console.WriteLine($"{m.MachineID}  {m.LaundromatID} {m.Type}");
-            }
+            //machines = hahah.GetAll();
 
-            
+
+
         }
 
     }
