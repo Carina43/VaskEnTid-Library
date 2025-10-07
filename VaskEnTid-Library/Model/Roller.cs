@@ -8,7 +8,7 @@ namespace VaskEnTidLibrary.Model
 {
     public class Roller : Machine
     {
-        public Roller(int id, int laundromatID) : base(id, laundromatID)
+        public Roller(int machineID, int laundromatID) : base(machineID, laundromatID)
         {
             Type = MachineType.Rullemaskine;
         }

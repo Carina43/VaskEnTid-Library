@@ -8,7 +8,7 @@ namespace VaskEnTidLibrary.Model
 {
     public class Dryer : Machine
     {
-        public Dryer(int id, int laundromatID) : base(id, laundromatID) 
+        public Dryer(int machineID, int laundromatID) : base(machineID, laundromatID) 
         {
             Type = MachineType.Tørretumbler;
         }

@@ -23,26 +23,26 @@ namespace VaskEnTest
             //    Console.WriteLine($"{booking.BookingID}  {booking.PhoneNumber}");
             //}
 
-            ResidentRepo hahah = new ResidentRepo();
+            MachineRepo hahah = new MachineRepo();
 
-            List<Resident> residents = hahah.GetAll();
-            foreach (Resident resident in residents)
+            List<Machine> machines = hahah.GetAll();
+            //foreach (Resident resident in residents)
+            //{
+            //    Console.WriteLine($"{resident.PhoneNumber}  {resident.FirstName}");
+            //}
+
+            //hahah.Add(new Resident("66677788", "Lucifer", "Schwarz","Transylvania 666", "6666" , "Transylvania", "6E", "draculasbitch@lucifer.evil"));
+            //hahah.Delete("98765432");
+
+            ////hahah.Update(new Resident("55773478", "Louise", "Louisen", "Holbækvej 215", "4300", "Holbæk", "1A", "louisebitch@live.dk"));
+            ////hahah.Update(new Resident("99000022", "Louise", "Poulsen", "Holbækvej 215", "4300", "Holbæk", "1A", "louisebitch@live.dk"),"55773478");
+            //hahah.Update(new Resident("33344455", "Gunnar", "Obsternasig", "Holbækvej 215", "4300", "Holbæk", "2A", "obsternasen@live.com"), "44773478");
+            //hahah.Update(new Resident("33344455", "Gunnar", "Obsternosig", "Holbækvej 215", "4300", "Holbæk", "2A", "obsternasen@live.com"), "33344455");
+
+            machines = hahah.GetAll();
+            foreach (Machine m in machines)
             {
-                Console.WriteLine($"{resident.PhoneNumber}  {resident.FirstName}");
-            }
-
-            hahah.Add(new Resident("66677788", "Lucifer", "Schwarz","Transylvania 666", "6666" , "Transylvania", "6E", "draculasbitch@lucifer.evil"));
-            hahah.Delete("98765432");
-
-            //hahah.Update(new Resident("55773478", "Louise", "Louisen", "Holbækvej 215", "4300", "Holbæk", "1A", "louisebitch@live.dk"));
-            //hahah.Update(new Resident("99000022", "Louise", "Poulsen", "Holbækvej 215", "4300", "Holbæk", "1A", "louisebitch@live.dk"),"55773478");
-            hahah.Update(new Resident("33344455", "Gunnar", "Obsternasig", "Holbækvej 215", "4300", "Holbæk", "2A", "obsternasen@live.com"), "44773478");
-            hahah.Update(new Resident("33344455", "Gunnar", "Obsternosig", "Holbækvej 215", "4300", "Holbæk", "2A", "obsternasen@live.com"), "33344455");
-
-            residents = hahah.GetAll();
-            foreach (Resident resident in residents)
-            {
-                Console.WriteLine($"{resident.PhoneNumber}  {resident.FirstName} {resident.LastName}");
+                Console.WriteLine($"{m.MachineID}  {m.LaundromatID} {m.Type}");
             }
 
             

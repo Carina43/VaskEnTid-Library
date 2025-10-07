@@ -35,16 +35,26 @@ namespace VaskEnTid_Library.Repo
                     switch(reader.GetString(2))
                     {
                         case "Vaskemaskine":
-                            
-                            break; 
-
-
-
+                            {
+                                Machine machine = new Washer(reader.GetInt16(0), reader.GetByte(1));
+                                machines.Add(machine);
+                                break;
+                            }
+                        case "Tørretumbler":
+                            {
+                                Machine machine = new Dryer(reader.GetInt16(0), reader.GetByte(1));
+                                machines.Add(machine);
+                                break;
+                            }
+                        case "Rullemaskine":
+                            {
+                                Machine machine = new Roller(reader.GetInt16(0), reader.GetByte(1));
+                                machines.Add(machine);
+                                break;
+                            }
 
                     }
-                    Machine machine = new Machine(reader.GetInt16(0), reader.GetInt16(1), reader.GetString(2));
 
-                    machines.Add(machine);
                 }
             }
             catch (Exception ex)
@@ -56,7 +66,7 @@ namespace VaskEnTid_Library.Repo
                 connection.Close();
             }
 
-            return residents;
+            return machines;
         }
     }
 }

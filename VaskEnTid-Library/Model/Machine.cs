@@ -18,9 +18,9 @@ namespace VaskEnTidLibrary.Model
         public int LaundromatID { get { return _luandromatID; } set { _luandromatID = value; } }
         public MachineType Type { get { return _machineType; } set { _machineType = value; } }
 
-        public Machine(int id, int laundromatID)
+        public Machine(int machineID, int laundromatID)
         {
-            MachineID = id;
+            MachineID = machineID;
             LaundromatID = laundromatID;
         }
     }
