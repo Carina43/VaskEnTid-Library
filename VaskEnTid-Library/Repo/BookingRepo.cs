@@ -26,7 +26,7 @@ namespace VaskEnTid_Library.Repo
             {
                 connection.Open();
 
-                string sqlCode = "SELECT BookingID, MachineID, PhoneNumber, Date, Time FROM Booking; ";
+                string sqlCode = "SELECT bookingID, machineID, phonenumber, bookingdate, bookingtime FROM Booking; ";
 
                 SqlCommand command = new SqlCommand(sqlCode, connection);
 
@@ -34,7 +34,7 @@ namespace VaskEnTid_Library.Repo
 
                 while (reader.Read())
                 {
-                    Booking booking = new Booking(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), DateOnly.FromDateTime(reader.GetDateTime(3)), TimeOnly.FromDateTime(reader.GetDateTime(4)));
+                    Booking booking = new Booking(reader.GetInt32(0), reader.GetInt16(1), reader.GetString(2), DateOnly.FromDateTime(reader.GetDateTime(3)), TimeOnly.FromTimeSpan(reader.GetTimeSpan(4)));
 
                     bookings.Add(booking);
                 }
