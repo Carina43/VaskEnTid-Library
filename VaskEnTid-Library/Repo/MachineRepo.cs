@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VaskEnTid_Library.Repo
 {
-    internal class MachineRepo
+    public class MachineRepo
     {
     }
 }
