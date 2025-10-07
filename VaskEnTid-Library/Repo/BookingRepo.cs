@@ -79,5 +79,30 @@ namespace VaskEnTid_Library.Repo
                 connection.Close();
             }
         }
+
+        public void Delete(int bookingID)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+
+                string sqlCode = "DELETE FROM Booking WHERE bookingID = @bookingID;";
+                SqlCommand command = new SqlCommand(sqlCode, connection);
+
+                command.Parameters.AddWithValue("@bookingID", bookingID);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error\n" + ex);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
