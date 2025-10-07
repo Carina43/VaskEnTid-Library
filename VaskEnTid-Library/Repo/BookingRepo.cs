@@ -11,7 +11,7 @@ namespace VaskEnTid_Library.Repo
 {
     public class BookingRepo
     {
-        static string connectionString = "Data Source=(localdb)\'MSSQLLocalDB; DataBase=VaskEnTid; Integrated Security = True; Encrypt=False;TrustServerCertificate=False;";
+        static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; DataBase = VaskEnTid ;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
         
         public List<Booking> GetAll()
         {
@@ -23,7 +23,7 @@ namespace VaskEnTid_Library.Repo
             {
                 connection.Open();
 
-                string sqlCode = "SELECT BookingID, MachineID, PhoneNumber, Date, Time FROM Booking; ";
+                string sqlCode = "SELECT bookingID, machineID, phonenumber, bookingdate, bookingtime FROM Booking; ";
 
                 SqlCommand command = new SqlCommand(sqlCode, connection);
 
