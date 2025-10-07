@@ -8,5 +8,7 @@ namespace VaskEnTid_Library.Repo
 {
     public interface IDatabaseRepo
     {
+
+
     }
 }
