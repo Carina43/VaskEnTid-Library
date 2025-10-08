@@ -46,5 +46,20 @@ namespace VaskEnTid_Library.Repo
 
             return laundromats;
         }
+
+        public void Add(Laundromat laundromat)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int laundromatID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Laundromat laundromat)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

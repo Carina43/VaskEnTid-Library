@@ -8,16 +8,17 @@ using Microsoft.Data.SqlClient;
 using VaskEnTidLibrary.Model;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Object = System.Object;
 
 namespace VaskEnTid_Library.Repo
 {
-    public class BookingRepo
+    public class BookingRepo : IDatabaseRepo
     {
         static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=VaskEnTid; Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
 
-        public List<Booking> GetAll()
+        public List<Object> GetAll()
         {
-            List<Booking> bookings = new List<Booking>();
+            List<Object> bookings = new List<Object>();
 
             SqlConnection connection = new SqlConnection(connectionString);
 

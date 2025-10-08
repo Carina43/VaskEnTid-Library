@@ -67,5 +67,20 @@ namespace VaskEnTid_Library.Repo
 
             return machines;
         }
+
+        public void Add(Machine machine)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int machineID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Machine machine)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
