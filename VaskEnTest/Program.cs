@@ -6,12 +6,19 @@ namespace VaskEnTest
     {
         static void Main(string[] args)
         {
-            IDatabaseRepo<Booking> hahah = new BookingRepo();
+            IDatabaseRepo<Machine, int> hahah = new MachineRepo();
 
             foreach (var obj in hahah.GetAll())
             {
-                Console.WriteLine($"{obj.BookingID}  {obj.PhoneNumber} {obj.BookingDate} ");
+                Console.WriteLine($"{obj.MachineID}  {obj.LaundromatID} {obj.Type} ");
             }
+
+            hahah.Add(new Roller(1, 2));
+
+            //foreach (var obj in hahah.GetAll())
+            //{
+            //    Console.WriteLine($"{obj.BookingID}  {obj.PhoneNumber} {obj.BookingDate} ");
+            //}
 
             //hahah.Update(new Booking(1, 8, "12345678", new DateOnly(2025, 12, 24), new TimeOnly(8, 0, 0)));
 

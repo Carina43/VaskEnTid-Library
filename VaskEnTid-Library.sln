@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaskEnTid-Library", "VaskEn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaskEnTest", "VaskEnTest\VaskEnTest.csproj", "{009A9720-8572-449B-A498-575B1677D2C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVaskEnTid", "..\WebVaskEnTid\WebVaskEnTid\WebVaskEnTid.csproj", "{C5748930-8578-4F80-854F-3F8EEF11AA03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{009A9720-8572-449B-A498-575B1677D2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{009A9720-8572-449B-A498-575B1677D2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{009A9720-8572-449B-A498-575B1677D2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5748930-8578-4F80-854F-3F8EEF11AA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5748930-8578-4F80-854F-3F8EEF11AA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5748930-8578-4F80-854F-3F8EEF11AA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5748930-8578-4F80-854F-3F8EEF11AA03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
