@@ -11,12 +11,38 @@ namespace VaskEnTid_Library.Service
     public class BookingService
     {
         private IDatabaseRepo<Booking, int> _bookingRepo = new BookingRepo();
+        private IDatabaseRepo<Resident, string> _residentRepo = new ResidentRepo();
+        private IDatabaseRepo<Machine, int> _machineRepo = new MachineRepo();
+        private IDatabaseRepo<Laundromat, int> _laundromatRepo = new LaundromatRepo();
+
+        internal List<Booking> _bookings = new List<Booking>();
+        internal List<Resident> _residents = new List<Resident>(); 
+        internal List<Machine> _machines = new List<Machine>(); 
+        internal List<Laundromat> _laundromats = new List<Laundromat>();
 
         public List<Booking> GetAllBookings()
         {
-            List<Booking> bookings = _bookingRepo.GetAll();
-
-            return bookings;
+            _bookings = _bookingRepo.GetAll();
+            return _bookings;
         }
+
+        public List<Resident> GetAllResidents()
+        {
+            _residents = _residentRepo.GetAll();
+            return _residents;
+        }
+
+        public List<Machine> GetAllMachines()
+        {
+            _machines = _machineRepo.GetAll();
+            return _machines;
+        }
+
+        public List<Laundromat> GetAllLaundromats()
+        {
+            _laundromats = _laundromatRepo.GetAll();
+            return _laundromats;
+        }
+
     }
 }
