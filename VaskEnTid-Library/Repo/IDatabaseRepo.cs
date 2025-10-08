@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace VaskEnTid_Library.Repo
 {
-    public interface IDatabaseRepo
+    public interface IDatabaseRepo<T>
+
     {
-        List<Object> GetAll();
+        List<T> GetAll();
 
-        void Add(Object obj);
+        void Add(T item);
 
-        void Delete(int id);
+        //void Delete(int id);
 
-        void Update(Object obj);
+        //void Update(Object obj);
 
     }
 }

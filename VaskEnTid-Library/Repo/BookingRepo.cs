@@ -12,13 +12,13 @@ using Object = System.Object;
 
 namespace VaskEnTid_Library.Repo
 {
-    public class BookingRepo : IDatabaseRepo
+    public class BookingRepo : IDatabaseRepo<Booking>
     {
         static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=VaskEnTid; Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
 
-        public List<Object> GetAll()
+        public List<Booking> GetAll()
         {
-            List<Object> bookings = new List<Object>();
+            List<Booking> bookings = new List<Booking>();
 
             SqlConnection connection = new SqlConnection(connectionString);
 
