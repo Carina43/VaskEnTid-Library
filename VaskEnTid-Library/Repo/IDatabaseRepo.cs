@@ -13,9 +13,9 @@ namespace VaskEnTid_Library.Repo
 
         void Add(T item);
 
-        //void Delete(int id);
+        void Delete(int id);
 
-        //void Update(Object obj);
+        void Update(T item);
 
     }
 }
