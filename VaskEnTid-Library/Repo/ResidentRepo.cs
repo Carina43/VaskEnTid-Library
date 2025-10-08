@@ -11,7 +11,7 @@ using VaskEnTidLibrary.Model;
 
 namespace VaskEnTid_Library.Repo
 {
-    public class ResidentRepo
+    public class ResidentRepo : IDatabaseRepo<Resident, string>
     {
         static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=VaskEnTid; Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
 

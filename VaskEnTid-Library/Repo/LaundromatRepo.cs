@@ -9,7 +9,7 @@ using VaskEnTidLibrary.Model;
 
 namespace VaskEnTid_Library.Repo
 {
-    public class LaundromatRepo
+    public class LaundromatRepo : IDatabaseRepo<Laundromat, int>
     {
         static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=VaskEnTid; Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Application Name=\"SQL Server Management Studio\";Command Timeout=30";
 
@@ -57,7 +57,7 @@ namespace VaskEnTid_Library.Repo
             throw new NotImplementedException();
         }
 
-        public void Update(Laundromat laundromat)
+        public void Update(Laundromat laundromat, int id)
         {
             throw new NotImplementedException();
         }
