@@ -15,10 +15,10 @@ namespace VaskEnTid_Library.Service
         private IDatabaseRepo<Machine, int> _machineRepo = new MachineRepo();
         private IDatabaseRepo<Laundromat, int> _laundromatRepo = new LaundromatRepo();
 
-        internal List<Booking> _bookings = new List<Booking>();
-        internal List<Resident> _residents = new List<Resident>(); 
-        internal List<Machine> _machines = new List<Machine>(); 
-        internal List<Laundromat> _laundromats = new List<Laundromat>();
+        public List<Booking> _bookings = new List<Booking>();
+        public List<Resident> _residents = new List<Resident>(); 
+        public List<Machine> _machines = new List<Machine>(); 
+        public List<Laundromat> _laundromats = new List<Laundromat>();
 
         public List<Booking> GetAllBookings()
         {

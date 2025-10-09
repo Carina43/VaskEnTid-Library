@@ -42,7 +42,10 @@ namespace VaskEnTidLibrary.Model
         {
             get { return _bookingTime; }
             set { _bookingTime = value; }
+
         }
+
+        public Booking() { }
 
 
         public Booking(int bookingID, int machineID, string phoneNumber, DateOnly bookingDate, TimeOnly bookingTime)
