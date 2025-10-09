@@ -46,6 +46,7 @@ namespace VaskEnTid_Library.Service
 
         public void CreateBooking(Booking booking)
         {
+
             _bookingRepo.Add(booking);
         }
 
