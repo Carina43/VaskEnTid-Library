@@ -44,10 +44,10 @@ namespace VaskEnTid_Library.Service
             return _laundromats;
         }
 
-        public void CreateBooking(Booking booking)
+        public void CreateBooking(int machineID, string phoneNumber, DateOnly bookingDate, TimeOnly bookingTime)
         {
 
-            _bookingRepo.Add(booking);
+            _bookingRepo.Add(new Booking(0, machineID, phoneNumber, bookingDate, bookingTime));
         }
 
         public void CancelBooking(int bookingID)
