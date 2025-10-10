@@ -46,7 +46,7 @@ namespace VaskEnTid_Library.Service
 
         public void CreateBooking(int machineID, string phoneNumber, DateOnly bookingDate, TimeOnly bookingTime)
         {
-
+            //if (CheckPhoneNumberExists(phoneNumber)) {
             _bookingRepo.Add(new Booking(0, machineID, phoneNumber, bookingDate, bookingTime));
         }
 
@@ -55,7 +55,15 @@ namespace VaskEnTid_Library.Service
             _bookingRepo.Delete(bookingID);
         }
 
+        // public bool CheckPhoneNumberExists(int phoneNumber)
 
+        // public bool CheckUniqueBooking(Booking newBooking)
+
+        // public List<Booking> GetPersonalBookings(int PhoneNumber)
+
+        // public void CreateResident(string phoneNumber, string firstName, string lastName, string adress, string zipCode, string City, string apartmentNumber, string email)
+
+        // public bool CheckUniqueResident(Resident newResident)
 
     }
 }
