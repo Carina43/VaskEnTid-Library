@@ -50,7 +50,7 @@ namespace VaskEnTid_Library.Service
             _bookingRepo.Add(new Booking(0, machineID, phoneNumber, bookingDate, bookingTime));
         }
 
-        public void CancelBooking(int bookingID)
+        public void DeleteBooking(int bookingID)
         {
             _bookingRepo.Delete(bookingID);
         }
