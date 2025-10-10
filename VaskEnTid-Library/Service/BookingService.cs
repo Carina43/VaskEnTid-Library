@@ -61,7 +61,10 @@ namespace VaskEnTid_Library.Service
 
         // public List<Booking> GetPersonalBookings(int PhoneNumber)
 
-        // public void CreateResident(string phoneNumber, string firstName, string lastName, string adress, string zipCode, string City, string apartmentNumber, string email)
+        public void CreateResident(string phoneNumber, string firstName, string lastName, string adress, string zipCode, string City, string apartmentNumber, string email)
+        {
+            _residentRepo.Add(new Resident(phoneNumber, firstName, lastName, adress, zipCode, City, apartmentNumber, email));
+        }
 
         // public bool CheckUniqueResident(Resident newResident)
 
